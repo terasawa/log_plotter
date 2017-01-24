@@ -117,3 +117,29 @@ ServoState:
 st_zmp:
   data:
     - { log: st_zmp, column: [0,1] }
+
+jvel:
+  func: plot_vel
+  data:
+    - { log: avlist, column: [0-33] }
+
+trajectory:
+  data:
+    - { log: xyzlist, column: [0-5] }
+
+jtorque:
+  data:
+    - { log: taulist, column: [0-33] }
+
+hit_point_vel:
+  data:
+    - { log: vellist, column: [0] }
+
+tau:
+  data:
+    - { log: RobotHardware0_tau, column: [0-33] }
+
+following:
+  data:
+    - { log: xyzlist, column: [0-7] }
+

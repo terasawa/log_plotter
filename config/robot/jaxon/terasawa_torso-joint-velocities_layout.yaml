@@ -1,0 +1,12 @@
+# extend:
+#     ../../st_layout.yaml
+
+main:
+  "Torso Joint Velocities":
+    legends:
+      - { key: jvel, id: [12], label: waist-r }
+      - { key: jvel, id: [13], label: waist-p }
+      - { key: jvel, id: [14], label: waist-r }
+    label: "Joint Velocities [deg/s]"
+    width: 140mm
+    height: 70mm

@@ -160,7 +160,7 @@ class DataloggerLogParser:
                 # add graph
                 plot_item = self.view.addPlot(viewBox = pyqtgraph.ViewBox(border = pyqtgraph.mkPen(color='k', width=2)))
                 self.legend_list[graph_row].append([])
-                plot_item.setTitle(title+" "+str(j))
+                plot_item.setTitle(title)# +" "+str(j))
                 plot_item.showGrid(x=True, y=True, alpha=1)
                 if group.has_key('downsampling'):
                     plot_item.setDownsampling(ds = group['downsampling'].get('ds', 100),
@@ -238,7 +238,7 @@ class DataloggerLogParser:
         col_num = len(self.view.ci.rows[row_num-1])
         for i in range(col_num):
             cur_item = self.view.ci.rows[row_num-1][i]
-            cur_item.setLabel("bottom", text="time [s]")
+            cur_item.setLabel("bottom", text="Time [s]")
 
     @my_time
     def setItemSize(self):
@@ -314,6 +314,10 @@ class DataloggerLogParser:
         font_style_list.append('font-family: ' + self.font_type)
         font_style_list.append('font-size: ' + str(self.font_size) + 'pt')
         font_style_list.append('color: ' + self.font_color)
+        font_style_list_legend = []
+        font_style_list_legend.append('font-family: ' + self.font_type)
+        font_style_list_legend.append('font-size: ' + '10pt')
+        font_style_list_legend.append('color: ' + self.font_color)
         sidelist = [ 'bottom', 'left' ]
         for p in self.view.ci.items.keys():
             text = p.titleLabel.text
@@ -322,6 +326,7 @@ class DataloggerLogParser:
             for data in p.legend.items:
                 label = data[1]
                 text = label.text
+                # full = "<span style='%s'>%s</span>" % ('; '.join(font_style_list_legend), text)
                 full = "<span style='%s'>%s</span>" % ('; '.join(font_style_list), text)
                 label.item.setHtml(full)
             for side in sidelist:

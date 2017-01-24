@@ -1,0 +1,17 @@
+# extend:
+#     ../../st_layout.yaml
+
+main:
+  "Left Arm Joint Velocities":
+    legends:
+      - { key: jvel, id: [25], label: collar-y }
+      - { key: jvel, id: [26], label: shoulder-p }
+      - { key: jvel, id: [27], label: shoulder-r }
+      - { key: jvel, id: [28], label: shoulder-y }
+      - { key: jvel, id: [29], label: elbow-p }
+      - { key: jvel, id: [30], label: wrist-y }
+      - { key: jvel, id: [31], label: wrist-r }
+      - { key: jvel, id: [32], label: wrist-p }
+    label: "Joint Velocities [deg/s]"
+    width: 140mm
+    height: 70mm

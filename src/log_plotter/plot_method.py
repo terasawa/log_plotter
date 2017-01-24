@@ -14,7 +14,8 @@ class PlotMethod(object):
     urata_len = 16
     # color_list = pyqtgraph.functions.Colors.keys()
     # default color set on gnuplot 5.0
-    color_list = ["9400D3", "009E73", "56B4E9", "E69F00", "F0E442", "0072B2", "E51E10", "0000FF"]
+    # color_list = ["9400D3", "009E73", "56B4E9", "E69F00", "F0E442", "0072B2", "E51E10", "0000FF"]
+    color_list = ["E51E10", "0000FF", "009E73", "F0E442", "E69F00", "56B4E9", "0072B2", "9400D3"]
     linetypes = {
         "color": color_list * 2,
         "style": [pyqtgraph.QtCore.Qt.SolidLine] * len(color_list) + [pyqtgraph.QtCore.Qt.DotLine] * len(color_list)
@@ -133,3 +134,10 @@ class PlotMethod(object):
     @staticmethod
     def normal(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         plot_item.plot(times, data_dict[logs[0]][:, log_cols[0]], pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
+
+    @staticmethod
+    def plot_vel(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+        dt = times[1] - times[0]
+        vel = numpy.diff(data_dict[logs[0]][:, log_cols[0]]) / dt
+        vel = numpy.append([0], vel)
+        plot_item.plot(times, vel, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)

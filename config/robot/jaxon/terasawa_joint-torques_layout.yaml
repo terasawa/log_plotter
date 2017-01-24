@@ -1,0 +1,16 @@
+# extend:
+#     ../../st_layout.yaml
+
+main:
+  "Joint Torques":
+      - { key: jtorque, id: [0], label: collar-y }
+      - { key: jtorque, id: [1], label: shoulder-p }
+      - { key: jtorque, id: [2], label: shoulder-r }
+      - { key: jtorque, id: [3], label: shoulder-y }
+      - { key: jtorque, id: [4], label: elbow-p }
+      - { key: jtorque, id: [5], label: wrist-y }
+      - { key: jtorque, id: [6], label: wrist-r }
+      - { key: jtorque, id: [7], label: wrist-p }
+    label: "Joint Velocities [deg/s]"
+    width: 140mm
+    height: 70mm

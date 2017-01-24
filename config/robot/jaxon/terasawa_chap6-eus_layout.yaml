@@ -1,0 +1,80 @@
+# extend:
+#     ../../st_layout.yaml
+
+main:
+  "X-coordinate of the Hitting Point":
+    legends:
+      - { key: trajectory, id: [0], label: planned}
+      - { key: trajectory, id: [3], label: actual}
+    label: "X Coordinate [m]"
+    width: 140mm
+    height: 70mm
+
+  "Y-coordinate of the Hitting Point":
+    legends:
+      - { key: trajectory, id: [1], label: planned}
+      - { key: trajectory, id: [4], label: actual}
+    label: "Y Coordinate [m]"
+    width: 140mm
+    height: 70mm
+
+  "Z-coordinate of the Hitting Point":
+    legends:
+      - { key: trajectory, id: [2], label: planned}
+      - { key: trajectory, id: [5], label: actual}
+    label: "Z Coordinate [m]"
+    width: 140mm
+    height: 70mm
+
+  "Position Error of the Hitting Point":
+    legends:
+      - { key: following, id: [6,7], label: error}
+    label: "Position Error [m]"
+    width: 140mm
+    height: 70mm
+
+  "Right Arm Joint Torques":
+    legends:
+      - { key: jvel, id: [17], label: collar-y }
+      - { key: jvel, id: [18], label: shoulder-p }
+      - { key: jvel, id: [19], label: shoulder-r }
+      - { key: jvel, id: [20], label: shoulder-y }
+      - { key: jvel, id: [21], label: elbow-p }
+      - { key: jvel, id: [22], label: wrist-y }
+      - { key: jvel, id: [23], label: wrist-r }
+      - { key: jvel, id: [24], label: wrist-p }
+    label: "Joint Torques [Nm]"
+    width: 140mm
+    height: 70mm
+
+
+
+  # "Left Arm Joint Velocities":
+  #   legends:
+  #     - { key: jvel, id: [25], label: collar-y }
+  #     - { key: jvel, id: [26], label: shoulder-p }
+  #     - { key: jvel, id: [27], label: shoulder-r }
+  #     - { key: jvel, id: [28], label: shoulder-y }
+  #     - { key: jvel, id: [29], label: elbow-p }
+  #     - { key: jvel, id: [30], label: wrist-y }
+  #     - { key: jvel, id: [31], label: wrist-r }
+  #     - { key: jvel, id: [32], label: wrist-p }
+  #   label: "Joint Velocities [deg/s]"
+  #   width: 140mm
+  #   height: 70mm
+
+  # "Torso Joint Velocities":
+  #   legends:
+  #     - { key: jvel, id: [12], label: waist-r }
+  #     - { key: jvel, id: [13], label: waist-p }
+  #     - { key: jvel, id: [14], label: waist-r }
+  #   label: "Joint Velocities [deg/s]"
+  #   width: 140mm
+  #   height: 70mm
+
+  # "Velocity in the n Direction":
+  #   legends:
+  #     - { key: hit_point_vel, id: [0], label: velocity }
+  #   label: "Velocity [m/s]"
+  #   width: 140mm
+  #   height: 70mm

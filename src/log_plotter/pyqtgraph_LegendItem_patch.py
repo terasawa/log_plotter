@@ -7,8 +7,8 @@ from pyqtgraph.graphicsItems.PlotDataItem import PlotDataItem
 
 # set legend forefround white
 def white_foreground_legend_item_paint(legend_item, p, *args):
-    p.setPen(fn.mkPen(0,0,0,255, width = 1)) # r,g,b,alpha
-    p.setBrush(fn.mkBrush(255,255,255,255))
+    p.setPen(fn.mkPen(0,0,0,0, width = 1)) # r,g,b,alpha
+    p.setBrush(fn.mkBrush(255,255,255,0))
     p.drawRect(legend_item.boundingRect())
 
 # set legend, ItemSample horizontal
@@ -58,12 +58,12 @@ def LegendItem_updateSize(self):
     width = 0
     #print("-------")
     for sample, label in self.items:
-        height += max(sample.height(), label.height()) + 3
+        height += max(sample.height(), label.height()) + -30
         width = max(width, sample.width()+label.width())
         #print(width, height)
     #print width, height
-    # self.setGeometry(0, 0, width+25, height)
-    self.setGeometry(0, 0, width+35, height)
+    self.setGeometry(0, 0, width+30, height)
+    # self.setGeometry(0, 0, width+35, height-100)
 
 # justify left for legend label
 from pyqtgraph.graphicsItems.LabelItem import LabelItem
