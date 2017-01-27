@@ -4,24 +4,24 @@
 main:
   "X-coordinate of the Hitting Point":
     legends:
-      - { key: trajectory, id: [0], label: planned}
-      - { key: trajectory, id: [3], label: actual}
+      - { key: trajectory, id: [0], label: actual}
+      - { key: trajectory, id: [3], label: planned}
     label: "X Coordinate [m]"
     width: 140mm
     height: 70mm
 
   "Y-coordinate of the Hitting Point":
     legends:
-      - { key: trajectory, id: [1], label: planned}
-      - { key: trajectory, id: [4], label: actual}
+      - { key: trajectory, id: [1], label: actual}
+      - { key: trajectory, id: [4], label: planned}
     label: "Y Coordinate [m]"
     width: 140mm
     height: 70mm
 
   "Z-coordinate of the Hitting Point":
     legends:
-      - { key: trajectory, id: [2], label: planned}
-      - { key: trajectory, id: [5], label: actual}
+      - { key: trajectory, id: [2], label: actual}
+      - { key: trajectory, id: [5], label: planned}
     label: "Z Coordinate [m]"
     width: 140mm
     height: 70mm
