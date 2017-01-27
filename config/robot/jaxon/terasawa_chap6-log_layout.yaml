@@ -12,11 +12,11 @@ main:
       - { key: rh_st_diff, id: [22], label: wrist-y }
       - { key: rh_st_diff, id: [23], label: wrist-r }
       - { key: rh_st_diff, id: [24], label: wrist-p }
-    label: "Joint Velocities [deg/s]"
+    label: "Tracking Error [deg]"
     width: 140mm
     height: 70mm
 
-  "Left Arm Joint Velocities":
+  "Left Arm Tracking Error":
     legends:
       - { key: rh_st_diff, id: [25], label: collar-y }
       - { key: rh_st_diff, id: [26], label: shoulder-p }
@@ -26,16 +26,53 @@ main:
       - { key: rh_st_diff, id: [30], label: wrist-y }
       - { key: rh_st_diff, id: [31], label: wrist-r }
       - { key: rh_st_diff, id: [32], label: wrist-p }
-    label: "Joint Velocities [deg/s]"
+    label: "Tracking Error [deg]"
     width: 140mm
     height: 70mm
 
-  "Torso Joint Velocities":
+  "Torso Tracking Error":
     legends:
       - { key: rh_st_diff, id: [12], label: waist-r }
       - { key: rh_st_diff, id: [13], label: waist-p }
       - { key: rh_st_diff, id: [14], label: waist-r }
-    label: "Joint Velocities [deg/s]"
+    label: "Tracking Error [deg]"
+    width: 140mm
+    height: 70mm
+
+  "Right Arm Estimated Joint Torques":
+    legends:
+      - { key: tau, id: [17], label: collar-y }
+      - { key: tau, id: [18], label: shoulder-p }
+      - { key: tau, id: [19], label: shoulder-r }
+      - { key: tau, id: [20], label: shoulder-y }
+      - { key: tau, id: [21], label: elbow-p }
+      - { key: tau, id: [22], label: wrist-y }
+      - { key: tau, id: [23], label: wrist-r }
+      - { key: tau, id: [24], label: wrist-p }
+    label: "Joint Torques [Nm]"
+    width: 140mm
+    height: 70mm
+
+  "Left Arm Estimated Joint Torques":
+    legends:
+      - { key: tau, id: [25], label: collar-y }
+      - { key: tau, id: [26], label: shoulder-p }
+      - { key: tau, id: [27], label: shoulder-r }
+      - { key: tau, id: [28], label: shoulder-y }
+      - { key: tau, id: [29], label: elbow-p }
+      - { key: tau, id: [30], label: wrist-y }
+      - { key: tau, id: [31], label: wrist-r }
+      - { key: tau, id: [32], label: wrist-p }
+    label: "Joint Torques [Nm]"
+    width: 140mm
+    height: 70mm
+
+  "Torso Estimated Joint Torques":
+    legends:
+      - { key: tau, id: [12], label: waist-r }
+      - { key: tau, id: [13], label: waist-p }
+      - { key: tau, id: [14], label: waist-r }
+    label: "Joint Torques [Nm]"
     width: 140mm
     height: 70mm
 

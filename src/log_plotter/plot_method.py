@@ -81,7 +81,7 @@ class PlotMethod(object):
     @staticmethod
     def plot_rh_q_st_q(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
         plot_item.plot(times, [math.degrees(x) for x in (data_dict[logs[1]][:, log_cols[1]] - data_dict[logs[0]][:, log_cols[0]])],
-                       pen=pyqtgraph.mkPen('r', width=2, style=PlotMethod.linetypes["style"][i]), name=logs[1]+" - rh_q")
+                       pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=logs[1]+" - rh_q")
 
     @staticmethod
     def plot_rad2deg(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
@@ -141,3 +141,15 @@ class PlotMethod(object):
         vel = numpy.diff(data_dict[logs[0]][:, log_cols[0]]) / dt
         vel = numpy.append([0], vel)
         plot_item.plot(times, vel, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
+
+    # @staticmethod
+    # def plot_following_diff(plot_item, times, data_dict, logs, log_cols, cur_col, key, i):
+    #     data_minuend_x = data_dict[logs[0]][:, log_cols[0]]
+    #     data_minuend_y = data_dict[logs[1]][:, log_cols[1]]
+    #     data_minuend_z = data_dict[logs[2]][:, log_cols[2]]
+    #     data_subtrahend_x = data_dict[logs[3]][:, log_cols[3]]
+    #     data_subtrahend_y = data_dict[logs[4]][:, log_cols[4]]
+    #     data_subtrahend_z = data_dict[logs[5]][:, log_cols[5]]
+    #     data = numpy.sqrt( (data_minuend_x - data_subtrahend_x)**2 # + (data_minuend_y - data_subtrahend_y)**2
+    #                       + (data_minuend_z - data_subtrahend_z)**2).tolist()
+    #     plot_item.plot(times, data, pen=pyqtgraph.mkPen(PlotMethod.linetypes["color"][i], width=2, style=PlotMethod.linetypes["style"][i]), name=key)
