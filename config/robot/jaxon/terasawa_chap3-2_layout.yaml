@@ -1,0 +1,41 @@
+# extend:
+#     ../../st_layout.yaml
+
+main:
+  "Right Arm Joint Torques":
+    legends:
+      - { key: jtorque, id: [17], label: collar-y }
+      - { key: jtorque, id: [18], label: shoulder-p }
+      - { key: jtorque, id: [19], label: shoulder-r }
+      - { key: jtorque, id: [20], label: shoulder-y }
+      - { key: jtorque, id: [21], label: elbow-p }
+      - { key: jtorque, id: [22], label: wrist-y }
+      - { key: jtorque, id: [23], label: wrist-r }
+      - { key: jtorque, id: [24], label: wrist-p }
+    label: "Joint Torques [Nm]"
+    width: 140mm
+    height: 70mm
+
+  "Left Arm Joint Torques":
+    legends:
+      - { key: jtorque, id: [25], label: collar-y }
+      - { key: jtorque, id: [26], label: shoulder-p }
+      - { key: jtorque, id: [27], label: shoulder-r }
+      - { key: jtorque, id: [28], label: shoulder-y }
+      - { key: jtorque, id: [29], label: elbow-p }
+      - { key: jtorque, id: [30], label: wrist-y }
+      - { key: jtorque, id: [31], label: wrist-r }
+      - { key: jtorque, id: [32], label: wrist-p }
+    label: "Joint Torques [Nm]"
+    width: 140mm
+    height: 70mm
+
+  "Torso Joint Torques":
+    legends:
+      - { key: jtorque, id: [12], label: waist-r }
+      - { key: jtorque, id: [13], label: waist-p }
+      - { key: jtorque, id: [14], label: waist-r }
+    label: "Joint Torques [Nm]"
+    width: 140mm
+    height: 70mm
+
